@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+## Introduction
 
-You can use the [editor on GitHub](https://github.com/raviy0807/ML1819-task-105--team-37/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This repository is created for Machine Learning Assignment as part of the 2018/19 Machine Learning module CS7CS4 at Trinity College Dublin.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Getting Started
 
-### Markdown
+You can learn how to analyze the impact of noise on dataset for machine learning application.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### DataSet
+
+This will be published after the deadline of project.
+
+### Contribution 
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+This project is a group assignment which is developed by following students:
+1. Ankit Samantaray
+2. Raksha 
+3. Ravi Yadav
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/raviy0807/ML1819-task-105--team-37/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+After November 2018, the repository is open for the contribution.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages?[contact us](yadavra@tcd.ie) and we’ll help you sort it out.
