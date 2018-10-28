@@ -8,7 +8,8 @@ You can learn how to analyze the impact of noise on dataset for machine learning
 
 ### DataSet
 
-This will be published after the deadline of project.
+The dataset consists of data collected from heavy Scania trucks in everyday usage. The system in focus is the Air Pressure system (APS) which generates pressurised air that are utilized in various functions in a truck, such as braking and gear changes. The datasets' 
+positive class consists of component failures for a specific component of the APS system. The negative class consists of trucks with failures for components not related to the APS. The data consists of a subset of all available data, selected by experts. 
 
 ### Reseach Paper 
 
@@ -25,8 +26,6 @@ The project is developed based on the study of following research papers:
 9. Rubin, D.B.: Multiple Imputation for Nonresponse in Surveys. Wiley, New York (1987)
 
 ```
-After November 2018, the repository is open for the contribution.
-
 
 ### Contribution 
 
@@ -37,7 +36,6 @@ This project is a group assignment which is developed by following students:
 3. Ravi Yadav
 ```
 After November 2018, the repository is open for the contribution.
-
 
 ### Support or Contact
 
