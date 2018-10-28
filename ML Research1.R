@@ -445,4 +445,11 @@ mice_plot <- aggr(training_data_fin, col=c('blue','yellow'),
 dim(FinalDataImpute)
 
 
-
+ library(caret)
+  train_control <- trainControl(method="cv", number=2)
+  # Fit Naive Bayes Model
+  model <- train(class~., data=training_data_fin, trControl=train_control, method="nb")
+  # Summarise Results
+  print(model)
+  t_kfold<-predict(model,test_data_fin)
+  NBinfkfold<-confusionMatrix(t_kfold,test_data_fin$class,positive = "1")
