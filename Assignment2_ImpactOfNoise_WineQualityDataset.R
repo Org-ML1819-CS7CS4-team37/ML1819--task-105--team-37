@@ -173,3 +173,47 @@ confusionMatrix(Data_Test$quality,predNB)
 
 
 
+############################## Gaussian Noise  10 % , 25 % 40 %
+
+Noise <- read.table("C:/Raksha/Scalable/AirQualityUCI/AirQualityUCI.csv",header = TRUE,sep=",")
+NROW(Data_Census)
+dim(Noise)
+head(Noise)
+Noise_final<-(Noise[1:2000,2:13])
+colnames(Noise_final)=colnames(Data_noiose)
+Noise_final[12]
+Data_noiose<-Data_Census
+
+install.packages("gtools")
+library(gtools)
+class(Noise_final$quality)
+NROW(Data_noiose)
+Noise_final$quality[which(Noise_final$quality<=12.9)]=0
+Noise_final$quality[which(Noise_final$quality>=13 | Noise_final$quality<=14.9)]=1
+
+Noise_final$quality[which(Noise_final$quality>=15)]=2
+Data_noiose$quality[which(Data_noiose$quality<=5)]=0
+Data_noiose$quality[which(Data_noiose$quality==6)]=1
+Data_noiose$quality[which(Data_noiose$quality==7)]=1
+Data_noiose$quality[which(Data_noiose$quality>=8)]=2
+Noise_final$quality<-as.factor(Noise_final$quality)
+Noise_final$quality
+dim(Noise_final)
+Data_noiose<-rbind(Data_noiose[1:2000,],Noise_final)
+dim(Data_noiose)
+dim(Noise_final)
+dpart <- createDataPartition(Data_noiose$quality, p = 0.7, list = F)
+
+Data_Train<-Data_noiose[dpart,]
+Data_Test<-Data_noiose[-dpart,]
+Data_Test$quality
+head(Data_Train)
+
+
+train_control<- trainControl(method="cv", number=10)
+tunegrid <- expand.grid(.mtry=6)
+RF_Feature_Engineering <- train(quality~. , 
+                                data=Data_Train,
+                                method = "rf",trControl = train_control,tuneGrid=tunegrid)
+#,tuneGrid=tunegrid
+#tuneGrid = data.frame(fL=0, usekernel=FALSE,adjust=FALSE)
