@@ -36,6 +36,13 @@ This project is a group assignment which is developed by following students:
 3. Ravi Yadav
 ```
 After November 2018, the repository is open for the contribution.
+### 
+In phase 2 we have done done the analysis of Noise on Performance of Machine LearningAlgorithms
+
+### DataSet for this phase 
+
+We have used a famous multiclass Wine Quality Data-Set from UCI Machine Learning library which consisted of the red and white variants of the Portuguese "Vinho Verde" wine\cite{uci}. In this project, we have used only white wine dataset with 4898 instances. The data contains no missing values and consists of only numeric data. The data-set has 12 attributes and 'Quality' being the target variable which indicates the wine quality on scale of 0-10.
+
 
 ### Support or Contact
 
