@@ -238,7 +238,16 @@ Data_Test$quality<-as.factor(Data_Test$quality)
 t<-table(Data_Test$quality,predNB)
 confusionMatrix(Data_Test$quality,predNB)
 
- 
+
+
+
+
+
+
+
+
+
+
 ################################## feature replace 10% 25% 40%
 
 Noise <- read.table("C:/Raksha/Scalable/AirQualityUCI/AirQualityUCI.csv",header = TRUE,sep=",")
@@ -295,14 +304,4 @@ Data_Test$quality<-as.factor(Data_Test$quality)
 
 t<-table(Data_Test$quality,predNB)
 confusionMatrix(Data_Test$quality,predNB)
-
-
-
-
-
-
-
-
-
-
 
