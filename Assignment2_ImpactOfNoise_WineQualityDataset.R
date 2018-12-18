@@ -238,6 +238,65 @@ Data_Test$quality<-as.factor(Data_Test$quality)
 t<-table(Data_Test$quality,predNB)
 confusionMatrix(Data_Test$quality,predNB)
 
+ 
+################################## feature replace 10% 25% 40%
+
+Noise <- read.table("C:/Raksha/Scalable/AirQualityUCI/AirQualityUCI.csv",header = TRUE,sep=",")
+NROW(Data_Census)
+dim(Noise)
+head(Noise)
+Noise_final<-(Noise[1:4898,3:4])
+
+Noise_final[12]
+Data_noiose<-Data_Census
+
+install.packages("gtools")
+library(gtools)
+class(Noise_final$quality)
+NROW(Data_noiose)
+
+dim(Noise_final)
+Data_noiose<-cbind(Data_noiose[,3:12],Noise_final)
+dim(Data_noiose)
+dim(Noise_final)
+dpart <- createDataPartition(Data_noiose$quality, p = 0.7, list = F)
+
+Data_Train<-Data_noiose[dpart,]
+Data_Test<-Data_noiose[-dpart,]
+Data_Test$quality
+head(Data_Train)
+
+
+train_control<- trainControl(method="cv", number=10)
+tunegrid <- expand.grid(.mtry=6)
+RF_Feature_Engineering <- train(quality~. , 
+                                data=Data_Train,
+                                method = "rf",trControl = train_control,tuneGrid=tunegrid)
+#,tuneGrid=tunegrid
+#tuneGrid = data.frame(fL=0, usekernel=FALSE,adjust=FALSE)
+predrf <- predict(RF_Feature_Engineering, Data_Test)
+colnames(Data_Train)
+t2<-table(Data_Test$quality,predrf)
+confusionMatrix(Data_Test$quality,predrf)
+
+VarIm<-varImp(RF_Feature_Engineering)
+plot(varImp(RF_Feature_Engineering))
+colnames(varImp(RF_Feature_Engineering))
+
+
+train_control<- trainControl(method="cv", number=5)
+NB_Feature_Engineering <- train(quality~. , 
+                                data=Data_Train,
+                                method = "nb",trControl = train_control)
+#            trControl = trainControl(method="none"),
+#tuneGrid = data.frame(fL=0, usekernel=TRUE,adjust=3)
+predNB <- predict(NB_Feature_Engineering, Data_Test)
+Data_Test$quality<-as.factor(Data_Test$quality)
+
+t<-table(Data_Test$quality,predNB)
+confusionMatrix(Data_Test$quality,predNB)
+
+
 
 
 
