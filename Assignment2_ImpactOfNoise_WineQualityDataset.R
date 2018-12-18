@@ -9,7 +9,7 @@ hist(Data_Census$quality,
      main="Histogram for Air Passengers", 
      xlab="Passengers", 
      border="blue", 
-     col="green", 
+     col="yellow", 
     
      las=1, 
      breaks=5, 
