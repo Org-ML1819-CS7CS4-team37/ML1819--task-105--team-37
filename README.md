@@ -56,6 +56,29 @@ This project is a group assignment which is developed by following students:
 1. Ankit Samantaray
 2. Raksha Kodandaramu
 3. Ravi Yadav
+
+Detailed Contribution
+Ravi (17318412)
+
+    Background research on attribute noise.
+    Read research paper on the impact of noise.
+    Contributed to data pre-processing stage.
+    Developed code for feature engineering.
+    Contributed to writing the 'Result' section of the report.
+
+Raksha (18300546)
+
+    Read research paper on attribute noise.
+    Developed code for Random Forest
+    Implemented the noise introduced by adding irrelevant features.
+    Written 'Limitation and Future Scope'  and 'Noise Introduction' sections of the report. 
+
+Ankit 
+
+    Developed function for Naive Bayes implementation.
+    Read research paper on the introduction of noise on the raw dataset.
+    Generated graphs for the report.
+    Written 'Introduction', 'Related Work' and Dataset sections of the report.
 ```
 After November 2018, the repository is open for the contribution.
 ### 
