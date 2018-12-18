@@ -298,7 +298,7 @@ NB_Feature_Engineering <- train(quality~. ,
                                 data=Data_Train,
                                 method = "nb",trControl = train_control)
 #            trControl = trainControl(method="none"),
-#tuneGrid = data.frame(fL=0, usekernel=TRUE,adjust=3)
+#tuneGrid = data.frame(fL=0, usekernel=TRUE,adjust=3)###########################
 predNB <- predict(NB_Feature_Engineering, Data_Test)
 Data_Test$quality<-as.factor(Data_Test$quality)
 
